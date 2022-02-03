@@ -76,6 +76,7 @@ open files         (-n) 1024<br/>
 root@Computer:~# sleep 1h<br/>
 ^Z<br/>
 [1]+  Stopped                 sleep 1h<br/>
+
 root@Computer:~# ps<br/>
     PID TTY          TIME CMD<br/>
       1 pts/1    00:00:00 bash<br/>
