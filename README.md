@@ -72,6 +72,7 @@ open files         (-n) 1024<br/>
 -n	the maximum number of open file descriptors
 
 6. root@Computer:~# unshare -f -p --mount-proc /bin/bash<br/>
+
 root@Computer:~# sleep 1h<br/>
 ^Z<br/>
 [1]+  Stopped                 sleep 1h<br/>
