@@ -46,9 +46,9 @@ Saving to: ‘/tmp/new/test.gz’<br/>
 2022-02-06 11:46:57 (10.2 MB/s) - ‘/tmp/new/test.gz’ saved [22107112/22107112]<br/>
 root@vagrant:~#<br/>
 
-14.<br/> ![img_10.png](img_10.png)
-15. root@vagrant:~# gzip -t /tmp/new/test.gz<br/> 
-root@vagrant:~# echo $?<br/> 
+14.<br/> ![img_10.png](img_10.png)<br/>
+15. root@vagrant:# gzip -t /tmp/new/test.gz<br/> 
+root@vagrant:# echo $?<br/> 
 0<br/> 
 16. root@vagrant:# pvmove /dev/md1 /dev/md0<br/> 
   /dev/md1: Moved: 12.00%<br/> 
@@ -57,8 +57,8 @@ root@vagrant:~# echo $?<br/>
 mdadm: set /dev/sdb1 faulty in /dev/md0<br/> 
 18. [ 5183.011599] md/raid1:md0: Disk failure on sdb1, disabling device.<br/> 
                md/raid1:md0: Operation continuing on 1 devices.<br/> 
-19. root@vagrant:~# gzip -t /tmp/new/test.gz<br/> 
-root@vagrant:~# echo $?<br/> 
+19. root@vagrant:# gzip -t /tmp/new/test.gz<br/> 
+root@vagrant:# echo $?<br/> 
 0<br/> 
 20. andy@Computer:~/Desktop/Vagrant$ vagrant destroy<br/> 
     default: Are you sure you want to destroy the 'default' VM? [y/N] y<br/> 
