@@ -29,4 +29,4 @@ dns.google.		655	IN	A	8.8.8.8<br/>
 dns.google.		655	IN	A	8.8.4.4<br/>
 8.<br/>![img_20.png](img_20.png)<br/>
 <br/>![img_21.png](img_21.png)<br/>
-к ip 8.8.8.8  8.8.4.4 привязано имя dns.google
+к ip 8.8.8.8 и 8.8.4.4 привязано имя dns.google
