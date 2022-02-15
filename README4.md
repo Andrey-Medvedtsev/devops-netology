@@ -3,6 +3,7 @@
 ![img_31.png](img_31.png)<br/>
 ![img_32.png](img_32.png)<br/>
 2. <br/>![img_33.png](img_33.png)<br/>
+добавлены маршруты для сетей 10.10.10.0/24 и 172.16.10.0/24
 ![img_34.png](img_34.png)<br/>
 3. <br/>![img_35.png](img_35.png)<br/>
 открыты порты: http,https, используются приложениями thunderbird, firefox, java<br/>
