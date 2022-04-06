@@ -106,39 +106,28 @@ import socket
 hosts = {'drive.google.com': socket.gethostbyname('drive.google.com'),
          'mail.google.com': socket.gethostbyname('mail.google.com'),
          'google.com': socket.gethostbyname('google.com')}
+
 hosts_new = {}
 for key in hosts.keys():
     socket.gethostbyname(key)
     hosts_new[key] = socket.gethostbyname(key)
 print('\tdrive.google.com', '-', hosts['drive.google.com'], '\n',
-      '\tmail.google.com', '-', hosts['mail.google.com'], '\n',
-      '\tgoogle.com', '-', hosts['google.com'])
-if hosts_new['drive.google.com'] != hosts['drive.google.com']:
-    print('ERROR drive.google.com IP mismatch: ', hosts['drive.google.com'], ' - ', hosts_new['drive.google.com'])
-if hosts_new['mail.google.com'] != hosts['mail.google.com']:
-    print('ERROR mail.google.com IP mismatch: ', hosts['mail.google.com'], ' - ', hosts_new['mail.google.com'])
-if hosts_new['google.com'] != hosts['google.com']:
-    print('ERROR google.com IP mismatch: ', hosts['google.com'], ' - ', hosts_new['google.com'])
+       '\tmail.google.com', '-', hosts['mail.google.com'], '\n',
+       '\tgoogle.com', '-', hosts['google.com'])
+for i in hosts:
+    if hosts[i] != hosts_new[i]:
+        print(f'[ERROR] {i} IP mismatch: {hosts[i]} - {hosts_new[i]}')
 
 ```
 
 ### Вывод скрипта при запуске при тестировании:
 ```
-/home/andy/PycharmProjects/pythonProject3/venv/bin/python /home/andy/PycharmProjects/pythonProject3/venv/get_ip_1.py
-	drive.google.com - 108.177.14.194 
- 	mail.google.com - 142.250.150.18 
- 	google.com - 173.194.73.139
-ERROR mail.google.com IP mismatch:  142.250.150.18  -  142.250.150.83
-ERROR google.com IP mismatch:  173.194.73.139  -  173.194.73.102
+/usr/bin/python3.9 /home/andy/PycharmProjects/devops-netology/test3.py
+	drive.google.com - 74.125.131.194 
+ 	mail.google.com - 64.233.165.83 
+ 	google.com - 209.85.233.138
+[ERROR] google.com IP mismatch: 209.85.233.138 - 209.85.233.113
 
 Process finished with exit code 0
 
-/home/andy/PycharmProjects/pythonProject3/venv/bin/python /home/andy/PycharmProjects/pythonProject3/venv/get_ip_1.py
-	drive.google.com - 108.177.14.194 
- 	mail.google.com - 142.250.150.17 
- 	google.com - 173.194.73.138
-ERROR mail.google.com IP mismatch:  142.250.150.17  -  142.250.150.83
-ERROR google.com IP mismatch:  173.194.73.138  -  173.194.73.113
-
-Process finished with exit code 0
 ```
