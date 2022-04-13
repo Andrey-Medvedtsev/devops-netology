@@ -54,5 +54,5 @@ allow_bare_domains                    true<br/>
 allow_subdomains                      true<br/>
 allowed_domains                       [test.com]<br/>
 max_ttl                               720h<br/>
-![img_66.png](img_66.png)
-не понимаю, почему не формируется сертификат
+![img_66.png](img_66.png)<br/>
+не понимаю, почему не формируется сертификат<br/>
