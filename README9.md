@@ -14,7 +14,7 @@ export VAULT_ADDR='http://127.0.0.1:8200'<br/>
 vault operator init<br/>
 vault operator unseal PSD2huj9wY8ey+cPe7ZqLtVgI9MhhlCHbvUfm70FOgSd<br/>
 vault operator unseal Fh2UavlUuKt+TfBpMK0ex3QM1IUwPmpJwGcdkbvdIRR3<br/>
-vault operator unseal i4TU7gIRmrBqL2Xf/qFuRfGiGZJ9dfsTflgjYiDnhqeo
+vault operator unseal i4TU7gIRmrBqL2Xf/qFuRfGiGZJ9dfsTflgjYiDnhqeo<br/>
 vault login<br/>
 vault secrets enable pki<br/>
 vault secrets tune -max-lease-ttl=87600h pki<br/>
@@ -45,14 +45,13 @@ systemctl enable nginx<br/>
 8.
 ![img_63.png](img_63.png)<br/>
 ![img_64.png](img_64.png)<br/>
-9. для подготовки скрипта по перевыпуску сертификата сформирована команда:
-curl --header "X-Vault-Token: hvs.OCuJlhmMqZBbngSrEohfGJJb" --request POST --data '{"common_name": "host.test.com", "ttl": "720h"}' http://127.0.0.1:8200/v1/pki/issue/test-dot-com | jq<br/>
-но вывод - "common name host.test.com not allowed by this role"<br/>
-![img_65.png](img_65.png)<br/>
-при этом:<br/>
-allow_bare_domains                    true<br/>
-allow_subdomains                      true<br/>
-allowed_domains                       [test.com]<br/>
-max_ttl                               720h<br/>
-![img_66.png](img_66.png)<br/>
-не понимаю, почему не формируется сертификат<br/>
+9. скрипт<br/>
+![img_71.png](img_71.png)<br/>
+10. в crontab прописать:<br/>
+sudo crontab -e<br/>
+для демонстрации:<br/>
+*/1 * * * * /home/vagrant/gen_cert.sh<br/>
+для задания:<br/>
+![img_68.png](img_68.png)<br/>
+![img_70.png](img_70.png)<br/>
+![img_69.png](img_69.png)<br/>
