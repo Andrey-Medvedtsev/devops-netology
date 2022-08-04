@@ -1,4 +1,4 @@
-1. Приготовьте свой собственный inventory файл prod.yml
+1. Приготовьте свой собственный inventory файл prod.yml<br/>
 ![img_171.png](img_171.png)<br/>
 2, 3, 4. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает kibana.<br/>
 При создании tasks рекомендую использовать модули: get_url, template, unarchive, file.<br/>
