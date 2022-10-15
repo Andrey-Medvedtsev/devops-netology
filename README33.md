@@ -1,6 +1,6 @@
 1. Регистрация доменного имени<br/>
 ![img_243.png](img_243.png)
-делегировано cloud.yandex.net<br/>
+делегировано yandexcloud.net<br/>
 ![img_240.png](img_240.png)
 2. Создание инфраструктуры<br/>
 ![img_249.png](img_249.png)
